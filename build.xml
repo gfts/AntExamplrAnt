@@ -1,5 +1,5 @@
 <?xml version="1.0" ?> 
-<project name="AntExample1" default="Transfer">
+<project name="AntExample1" default="war">
 
 	<path id="compile.classpath">
 		<fileset dir="WebContent/WEB-INF/lib">
@@ -26,13 +26,13 @@
 		</war>
 	</target>
 
-        <target name="Transfer" depends="war">
+        <!--target name="Transfer" depends="war">
         <scp file="dist/AntExample.war"
            trust="yes"
            todir="ubuntu@172.31.87.4:/home/ubuntu/apache-tomcat-8.5.43/webapps"
            keyfile="${user.home}/.ssh/id_rsa"
            passphrase="my extremely secret passphrase"/>
-      </target>
+      </target -->
 
 	
 	<target name="clean">
